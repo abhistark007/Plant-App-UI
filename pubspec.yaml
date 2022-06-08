@@ -39,6 +39,7 @@ dependencies:
   google_fonts:
   get:
   animated_bottom_navigation_bar:
+  expandable_page_view:
 
 dev_dependencies:
   flutter_test:
