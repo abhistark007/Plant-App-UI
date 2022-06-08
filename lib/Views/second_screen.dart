@@ -24,7 +24,10 @@ class _SecondScreenState extends State<SecondScreen> {
         child: Column(
           children: [
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.8,
+              height: MediaQuery.of(context).orientation ==
+      Orientation.portrait? 
+      MediaQuery.of(context).size.height * 0.8:
+      800,
               width: MediaQuery.of(context).size.width,
               child: Stack(
                 children: [
