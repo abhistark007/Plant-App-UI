@@ -37,6 +37,8 @@ dependencies:
   flutter_svg:
   font_awesome_flutter:
   google_fonts:
+  get:
+  animated_bottom_navigation_bar:
 
 dev_dependencies:
   flutter_test:

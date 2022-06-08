@@ -1,11 +1,14 @@
 // ignore_for_file: prefer_const_constructors, unused_local_variable, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:plant_app_ui/Views/second_screen.dart';
 import 'package:plant_app_ui/constants.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:plant_app_ui/model/featured_container.dart';
 import 'package:plant_app_ui/model/recomended_container.dart';
+import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 
 class FirstScreen extends StatefulWidget {
   const FirstScreen({Key? key}) : super(key: key);
@@ -15,6 +18,7 @@ class FirstScreen extends StatefulWidget {
 }
 
 class _FirstScreenState extends State<FirstScreen> {
+  int _bottomNavIndex=0;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -134,7 +138,9 @@ class _FirstScreenState extends State<FirstScreen> {
                     ),
                     child: MaterialButton(
                       padding: EdgeInsets.zero,
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.to(()=>SecondScreen());
+                      },
                       child: Text(
                         "More",
                         style: TextStyle(
@@ -256,6 +262,17 @@ class _FirstScreenState extends State<FirstScreen> {
           ],
         ),
       ),
+      bottomNavigationBar: AnimatedBottomNavigationBar(
+        gapWidth: 10,
+      icons: [
+        FontAwesomeIcons.gear,
+        FontAwesomeIcons.heart,
+        FontAwesomeIcons.user
+      ],
+      activeIndex: _bottomNavIndex,
+      onTap: (index) => setState(() => _bottomNavIndex = index),
+      //other params
+   ),
     );
   }
 }
