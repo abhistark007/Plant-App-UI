@@ -1,7 +1,7 @@
 # plant_app_ui
 
 
-working demo video: [https://youtu.be/0ZUj8g0dCqA](https://youtube.com/shorts/0AkI8yDXETE?feature=share)
+working demo video: https://youtube.com/shorts/0AkI8yDXETE?feature=share
 
 
 
